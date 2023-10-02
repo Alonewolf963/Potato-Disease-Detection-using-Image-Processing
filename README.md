@@ -35,3 +35,5 @@ diseases.
 2) USB to TTL converter -  
 ![image](https://github.com/Alonewolf963/Potato-Disease-Detection-using-Image-Processing/assets/91773191/a6835073-5007-46f5-a00a-5fab143049a6)
 
+**Connections :**  
+![image](https://github.com/Alonewolf963/Potato-Disease-Detection-using-Image-Processing/assets/91773191/57803c1e-837f-454b-836f-4a2866e3a20f)  
