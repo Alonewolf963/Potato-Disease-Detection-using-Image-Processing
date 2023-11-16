@@ -1,7 +1,7 @@
 import cv2
 
-cascPath = "D:\SPIT sem4\mini project\Xml file\Common_Scab.xml"
-faceCascade = cv2.CascadeClassifier(cascPath)
+cascPath = "D:\SPIT sem4\mini project\Xml file\Sprouted_xml_file.xml"
+potatoCascade = cv2.CascadeClassifier(cascPath)
 
 video_capture = cv2.VideoCapture(0)
 
@@ -22,17 +22,17 @@ while True:
 
     gray = cv2.cvtColor(frames, cv2.COLOR_BGR2GRAY)
 
-    faces = faceCascade.detectMultiScale(
+    detected = potatoCascade.detectMultiScale(
         gray,
         scaleFactor=1.1,
-        minNeighbors=3,
+        minNeighbors=12,
         minSize=(10, 10)
     )
 
     # Draw a rectangle around the Potatoes
-    for (x, y, w, h) in faces:
+    for (x, y, w, h) in detected:
         cv2.rectangle(frames, (x, y), (x+w, y+h), (255, 0, 0), 3)
-        cv2.putText(frames, 'Sprouted', (x,y-10), font,
+        cv2.putText(frames, 'Sprouted Potato', (x,y-10), font,
                     fontScale, color, thickness, cv2.LINE_AA)
 
     # Display the resulting frame
